@@ -19,7 +19,7 @@ public class Bomb extends Actor
             resetBomb();
         }
         
-        // Jaiyu created the Gameover Class
+        // Jiayu created the Gameover Class
         if(isTouching(Penguin.class)) {
             Gameover end = new Gameover();
             getWorld().addObject(end, 100, 100);

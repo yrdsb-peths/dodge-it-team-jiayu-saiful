@@ -17,6 +17,10 @@ public class Penguin extends Actor
     public void act()
     {
         // Add your action code here.
+        if(isTouching(Bomb.class)) {
+            getWorld().removeObject(this);
+        }
+        
         if (Greenfoot.mouseClicked(null)) {
             atTop = !atTop;
         }
