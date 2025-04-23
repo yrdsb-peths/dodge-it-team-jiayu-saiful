@@ -8,10 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bomb extends Actor
 {
-    /**
-     * Act - do whatever the Bomb wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public Bomb() {
+        setImage("images/bomb.png");
+    }
+    
     public void act()
     {
         move(-7);
@@ -19,7 +19,7 @@ public class Bomb extends Actor
             resetBomb();
         }
         
-        // Jaiyu created the Gameover Class
+        // Jiayu created the Gameover Class
         if(isTouching(Penguin.class)) {
             Gameover end = new Gameover();
             getWorld().addObject(end, 100, 100);
