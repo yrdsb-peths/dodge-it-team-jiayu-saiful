@@ -14,7 +14,7 @@ public class Bomb extends Actor
      */
     public void act()
     {
-        move(-3);
+        move(-7);
         if(getX() <= 0) {
             resetBomb();
         }
@@ -22,7 +22,7 @@ public class Bomb extends Actor
         // Jaiyu created the Gameover Class
         if(isTouching(Penguin.class)) {
             Gameover end = new Gameover();
-            getWorld().addObjects(end, 100, 100);
+            getWorld().addObject(end, 100, 100);
             getWorld().removeObject(this);
         }
     }
